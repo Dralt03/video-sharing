@@ -3,8 +3,6 @@ import express from "express";
 import connetDB from "./db/index.js";
 import { app } from "./app.js";
 
-app = express();
-
 connetDB()
   .then(() => {
     app.listen(process.env.PORT || 8000, () => {
